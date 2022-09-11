@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-bg-claro: #f7f7ff;
+    --color-bg-oscuro: #495867;
+    --color-principal: #fe5f55;
+    --color-variante-1: #577399;
+    --color-variante-2: #bdd5ea;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/svg/fondo-faq.svg');
+    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.boton {
+    color: var(--color-bg-claro);
+    background-color: var(--color-bg-oscuro);
+    padding: 5px 10px;
+    font-weight: 500;
+    border: none;
+    height: 40px;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton::after {
+    content: "";
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -150%;
+    border-bottom: 40px solid var(--color-principal);
+    border-right: 40px solid transparent;
+    transition: .4s ease-in-out;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    color: var(--color-bg-claro);
+}
+
+.boton:hover::after {
+    left: 0;
+}
+
+.boton span {
+    position: relative;
+    z-index: 2;
+}
+
+/*********
+* NAVBAR *
+*********/
+.navbar {
+    background-color: transparent;
+}
+
+.navbar .navbar-toggler {
+    background-color: var(--color-bg-oscuro);
+    border-color: var(--color-bg-oscuro);
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247, 247, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar .logo {
+    cursor: pointer;
+    height: 40px;
+    transition: all .3s;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2);
+}
+
+.navbar .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-bg-oscuro);
+    transition: all .3s;
+}
+
+.navbar .nav-link:hover {
+    transform: scale(1.1);
+    color: var(--color-principal);
+}
+/********/
+
+/************
+* PREGUNTAS *
+************/
+main {
+    height: calc(100% - 70px);
+}
+
+main .row {
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+main .row .imagen {
+    width: 100%;
+    height: 400px;
+    background-image: url('../img/faq-cabecera.jpg');
+    background-repeat: repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+main .accordion-item {
+    border: none;
+}
+
+main .accordion-button {
+    font-weight: 500;
+    background-color: var(--color-bg-claro);
+    border-bottom: 1px solid var(--color-variante-1);
+    border-left: 5px solid var(--color-variante-1);
+    border-bottom-right-radius: 10px;
+}
+/***********/
+
+/*******************
+* MODAL Y TOAST's
+*******************/
+.toast {
+    position: fixed;
+    z-index: 20;
+    bottom: 2%;
+    right: 1%;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.6s;
+    animation: fadein 0.5s, fadeout 0.5s 4.6s;
+}
+
+.toast-header {
+    background-color: var(--color-variante-2);
+    color: var(--color-bg-oscuro);
+}
+
+.toast-body {
+    color: var(--color-bg-oscuro);
+}
+   
+  @-webkit-keyframes fadein {
+    from {right: 0; opacity: 0;} 
+    to {right: 1%; opacity: 1;}
+  }
+   
+  @keyframes fadein {
+    from {right: 0; opacity: 0;}
+    to {right: 1%; opacity: 1;}
+  }
+   
+  @-webkit-keyframes fadeout {
+    from {right: 1%; opacity: 1;} 
+    to {right: 0; opacity: 0;}
+  }
+   
+  @keyframes fadeout {
+    from {right: 1%; opacity: 1;}
+    to {right: 0; opacity: 0;}
+  }
+  
+#form-subscripcion .correo-subscripcion {
+    border: none;
+    border-bottom: 1px solid var(--color-variante-2);
+    border-bottom-right-radius: 10px;
+    transition: .2s all ease-out;
+}
+
+#form-subscripcion .correo-subscripcion:hover {
+    transition: .2s all ease-in;
+    border-bottom: 1px solid var(--color-variante-1);
+}
+/*****************/
+
+
+@media (max-width: 768px) {
+    main .row .imagen {
+        height: 0;
+        background-image: none;
+    }
+
+    .navbar .nav-link:hover {
+        transform: none;
+        color: var(--color-principal);
+    }
+}

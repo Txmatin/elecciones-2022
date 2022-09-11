@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-bg-claro: #f7f7ff;
+    --color-bg-oscuro: #495867;
+    --color-principal: #fe5f55;
+    --color-variante-1: #577399;
+    --color-variante-2: #bdd5ea;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration:none;
+}
+
+.boton {
+    color: var(--color-bg-oscuro);
+    background-color: var(--color-bg-claro);
+    padding: 5px 10px;
+    font-weight: 600;
+    border: none;
+    height: 40px;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton::after {
+    content: "";
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -150%;
+    border-bottom: 40px solid var(--color-principal);
+    border-right: 40px solid transparent;
+    transition: .4s ease-in-out;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    color: var(--color-bg-claro);
+}
+
+.boton:hover::after {
+    left: 0;
+}
+
+.boton span {
+    position: relative;
+    z-index: 2;
+}
+
+.revelar {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s all ease;
+}
+
+.revelar.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.separador {
+    border: 0;
+    height: 5px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, var(--color-variante-2), var(--color-bg-oscuro), var(--color-variante-2));
+}
+
+.icono {
+    font-size: 35px;
+    padding: 5px;
+    background-color: #fe5f55;
+    color: #f7f7ff;
+    border-radius: 8px;
+}
+
+/***************
+* HEADER Y NAV *
+***************/
+#contenedor_header {
+    position: fixed;
+    background-color: var(--color-bg-oscuro);;
+    z-index: 10;
+    transition: .2s all ease-in;
+}
+
+.header {
+    background-color: var(--color-bg-oscuro);
+    padding: 10px 30px;
+    transition: .4s all ease-in;
+}
+
+.contenedor_header-scrollY {
+    background-color: transparent!important;
+    transition: .4s all ease-out;
+}
+
+.header_scrollY {
+    margin-top: 10px;
+    border-radius: 50px;
+    transition: .6s all ease-out;
+}
+
+.header .logo {
+    cursor: pointer;
+    height: 50px;
+    transition: all .3s;
+}
+
+.header .logo:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-link {
+    color: var(--color-bg-claro);
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.header .nav-link:hover {
+    transform: scale(1.1);
+    color: var(--color-principal);
+}
+/***************/
+
+
+/*****************
+* TEXTO CABECERA *
+******************/
+#contenedor_heroe {
+    height: 100vh;
+    background-image: url('../img/escuela-tecnica1.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#cabecera-heroe {
+    font-weight: 800;
+    color: var(--color-bg-claro);
+}
+
+#cabecera-heroe::selection {
+    background: #fe6055b2;
+}
+
+#parrafo-heroe {
+    font-weight: 300;
+    color: var(--color-bg-claro);
+}
+
+#parrafo-heroe::selection {
+    background: #fe6055b2;
+}
+
+#imagen-heroe {
+    animation: animacionLogo 3s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes animacionLogo {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*****************/
+
+
+/************
+* ACERCA DE *
+************/
+.acerca-de .video {
+    width: 100%;
+    height: 650px;
+}
+
+.acerca-de .feature-titulo {
+    font-weight: 500;
+}
+
+/************/
+
+
+/*********
+* LISTAS *
+*********/
+.listas {
+    background-color: var(--color-variante-1);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.listas .col-lg-4 {
+    text-align: center;
+}
+
+#titulo-lista-roja {
+    background: -webkit-linear-gradient(45deg, #f89089, #f84033, #ff1504, #f84033, #f89089);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#titulo-lista-verde {
+    background: -webkit-linear-gradient(45deg, #cbf8ce, #71fc78, #00dd0bb4, #71fc78, #cbf8ce);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#titulo-lista-rosa {
+    background: -webkit-linear-gradient(45deg, #ffc0ff, #fe55fe, #ff00ff, #fe55fe, #ffc0ff);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.listas .col-lg-4 p {
+    color: var(--color-bg-claro);
+    font-weight: 300;
+}
+
+#listas-titulo {
+    color: var(--color-bg-claro);
+}
+
+.listas .btnPropuestas {
+    background-color: transparent;
+    color: var(--color-variante-2);
+    font-weight: 500;
+    border: 1px solid var(--color-variante-2);
+    border-radius: 5px;
+    transition: .2s all ease-in;
+}
+
+.listas .btnPropuestas:hover {
+    transition: .2s all ease-in;
+    color: var(--color-bg-claro);
+    border: 1px solid var(--color-bg-claro);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.listas .foto-lista {
+    width: 100%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+/*********/
+
+/********
+* VOTAR *
+********/
+.votar .titulo {
+    z-index: 20;
+    font-size: 36px;
+    background-color: var(--color-variante-1);
+    color: var(--color-bg-claro);
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.votar .imagen {
+    position: fixed;
+    top: 21%;
+    left: 0;
+    background-image: url('../img/lets-vote.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 200px;
+    z-index: -10;
+}
+
+.votar i {
+    font-size: 35px;
+    padding: 5px;
+    background-color: #fe5f55;
+    color: #f7f7ff;
+    border-radius: 8px;
+}
+
+/** ACLARACIÓN: Las propiedades de los elementos del contador no las hice con Bootstrap porque la librería usada para el mismo ('simplyCountdown') toma las clases y crea los elementos automáticamente **/
+#cuenta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: center;
+    padding: 5px;
+    margin: 50px 0;
+    width: 100%;
+}
+
+#cuenta .contador-seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: var(--color-principal);
+    color: var(--color-bg-claro);
+    width: 180px;
+    height: 180px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#cuenta .contador-seccion .contador-numero {
+    display: block;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+#cuenta .contador-seccion .contador-palabra {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+}
+
+.votar .llamada-accion h2 {
+    color: var(--color-bg-oscuro);
+}
+
+.votar .llamada-accion button {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.inactivo {
+    position: absolute;
+    visibility: hidden;
+}
+
+#confetti {
+    z-index: 10;
+    visibility: hidden;
+}
+
+#confetti.active {
+    transition: .2s all ease-out;
+    visibility: visible;
+}
+/*******/
+
+/*********
+* FOOTER *
+*********/
+.footer {
+    background-color: var(--color-bg-oscuro);
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+}
+
+.footer .footer-logo {
+    display: block;
+    height: 200px;
+    width: auto;
+}
+
+.footer .icono {
+    text-align: center;
+    font-size: 20px;
+    width: 30px;
+}
+
+.footer .contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-variante-2);
+    padding: 15px ;
+}
+
+.footer .contacto i,
+.footer .contacto span {
+    font-weight: 600;
+    color: var(--color-bg-oscuro);
+}
+
+.footer .contacto i {
+    font-size: 25px;
+    color: var(--color-principal);
+    width: 30px;
+}
+
+.footer .redes {
+    color: var(--color-bg-claro);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.footer .redes i {
+    color: var(--color-bg-claro);
+    font-size: 24px;
+    border: 2px solid var(--color-bg-claro);
+    border-radius: 50%;
+    transition: .3s all ease-in-out;
+}
+
+.footer .redes i:hover {
+    color: #1877f2;
+    border: 2px solid #1877f2;
+    transition: .3s all ease-in-out;
+}
+
+.footer .titulo {
+    color: var(--color-bg-claro);
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 2px solid var(--color-variante-2);
+}
+
+.footer .sitios ul li {
+    color: var(--color-bg-claro);
+    margin-left: 15px;
+    padding-bottom: 10px;
+}
+
+.footer .sitios ul a:link,
+.footer .sitios ul a:visited,
+.footer .sitios ul a:active {
+    color: var(--color-bg-claro);
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+.footer .sitios ul a:hover {
+    color: var(--color-variante-2);
+    transition: all .1s ease-in;
+}
+
+.simbolos {
+    color: var(--color-principal);
+    font-weight: 800;
+}
+
+.footer .formulario .campo{
+    color: var(--color-bg-claro);
+    margin-bottom: 10px;
+}
+
+.footer .formulario .campo input,
+.footer .formulario .campo textarea {
+    background-color: var(--color-bg-claro);
+    color: var(--color-bg-oscuro);
+    border-radius: 5px;
+    padding: 3px;
+    border: 2px solid var(--color-variante-1);
+    transition: .2s all ease-in;
+}
+
+.footer .formulario .campo input:hover,
+.footer .formulario .campo textarea:hover,
+.footer .formulario .enviar button:hover {
+    box-shadow: var(--color-variante-1) 0px 3px 8px;
+    transition: .1s all ease-out;
+}
+
+.footer .formulario .enviar button {
+    padding: 8px;
+    background-color: var(--color-variante-1);
+    border: none;
+    border-radius: 5px;
+    color: var(--color-bg-claro);
+    transition: .2s all ease-in;
+}
+
+.footer .enlaces .texto {
+    font-weight: 400;
+    color: var(--color-bg-claro);
+}
+
+.footer .enlaces ul li i {
+    font-size: 20px;
+    color: var(--color-variante-2);
+    transition: .3s all ease-out;
+}
+
+.footer .enlaces ul li i:hover {
+    color: var(--color-variante-1);
+    transition: .2s all ease-in;
+}
+
+.footer .formulario .enviar .spinner-border {
+    display: none;
+    color: var(--color-principal);
+}
+
+.mostrar {
+    display: inline!important;
+}
+/********/
+
+
+/*****************************
+* Mensajes emergentes y modals
+*****************************/
+.toast {
+    position: fixed;
+    z-index: 20;
+    bottom: 2%;
+    right: 1%;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.6s;
+    animation: fadein 0.5s, fadeout 0.5s 4.6s;
+}
+
+.toast-header {
+    background-color: var(--color-variante-2);
+    color: var(--color-bg-oscuro);
+}
+
+.toast-body {
+    color: var(--color-bg-oscuro);
+}
+   
+  @-webkit-keyframes fadein {
+    from {right: 0; opacity: 0;} 
+    to {right: 1%; opacity: 1;}
+  }
+   
+  @keyframes fadein {
+    from {right: 0; opacity: 0;}
+    to {right: 1%; opacity: 1;}
+  }
+   
+  @-webkit-keyframes fadeout {
+    from {right: 1%; opacity: 1;} 
+    to {right: 0; opacity: 0;}
+  }
+   
+  @keyframes fadeout {
+    from {right: 1%; opacity: 1;}
+    to {right: 0; opacity: 0;}
+  }
+
+#form-subscripcion .correo-subscripcion {
+    border: none;
+    border-bottom: 1px solid var(--color-variante-2);
+    border-bottom-right-radius: 10px;
+    transition: .2s all ease-out;
+}
+
+#form-subscripcion .correo-subscripcion:hover {
+    transition: .2s all ease-in;
+    border-bottom: 1px solid var(--color-variante-1);
+}
+/*******************/
+
+
+
+@media (max-width: 1000px) {
+    /* El nav deja de ser flotante en versiones móviles ya que por su forma responsiva puede ser muy molesta en pantalla */
+    #contenedor_header {
+        position: absolute;
+    }
+
+    .acerca-de .video {
+        height: 450px;
+    }
+
+    .votar .imagen {
+        top: 19%;
+    }
+
+    #cuenta {
+        margin: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer .sitios,
+    .footer .redes,
+    .footer .formulario,
+    .footer .enviar {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer .sitios ul li {
+        margin: 0;
+    }
+
+    .footer .redes .texto span {
+        display: block;
+    }
+
+    .footer .contacto {
+        padding: 8px;
+    }
+
+    .footer .contacto span {
+        font-size: 14px;
+    }
+
+    .footer .contacto i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .acerca-de .video {
+        height: 300px;
+    }
+
+    .votar .imagen {
+        top: 12.5%;
+    }
+
+    #cuenta {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

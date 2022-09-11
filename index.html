@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tomas Rivera">
+    <meta name="description" content="Página web de las elecciones del centro de estudiantes en la Escuela Técnica N1, ciclo lectivo 2022">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elecciones 2022 - E.N.E.T. N1, Ind. Argentina</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+        crossorigin="anonymous">
+
+    <!-- Index CSS -->
+    <link 
+        rel="stylesheet"
+        href="css/index.css"
+        type="text/css">
+
+    <!-- Font Awesome -->
+    <script 
+        src="https://kit.fontawesome.com/58fb316fe6.js" 
+        crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <!-- Nav -->
+    <div class="w-100"
+         id="contenedor_header">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mx-5 header">
+            <a href="/"
+               class="mb-2 mb-md-0 navbar-brand">
+                <img src="img/logo_tecnica1_independencia-argentina.png"
+                     alt="Logo de la escuela Técnica N1 - Independencia Argentina"
+                     class="rounded-circle bi me-2 logo"
+                     title="Técnica N1 - Independencia Argentina">
+            </a>
+
+            <nav class="col-12 col-md-auto mb-2 mb-md-0">
+                <ul class="nav justify-content-center">
+                    <li><a href="#acerca-de" class="nav-link px-3">Acerca de</a></li>
+                    <li><a href="#listas" class="nav-link px-3">Listas</a></li>
+                    <li><a href="#votar" class="nav-link px-3 toast-votar">Votar</a></li>
+                    <li><a href="#contacto" class="nav-link px-3">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button type="button"
+                    class="boton"
+                    id="btn-subscribir"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalSubscripcion">
+                <span>Subscribirme</span>
+            </button>
+        </header>
+    </div>
+
+    <!-- Cabecera -->
+    <header class="px-4 text-center d-flex justify-content-center align-items-center"
+         id="contenedor_heroe">
+        <div>
+            <img class="d-block mx-auto mb-4" 
+                src="img/logo_tecnica1_independencia-argentina.png"
+                alt="Logo de la escuela Técnica N1 - Independencia Argentina" 
+                id="imagen-heroe" 
+                width="72">
+            <h1 class="display-5 fw-bold" 
+                id="cabecera-heroe">Elecciones 2022</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4" 
+                    id="parrafo-heroe">
+                    Conocé los centros de estudiantes postulados para el ciclo
+                    lectivo 2022 por los alumnos de 7mo año, sus integrantes, y las innovadoras e interesantes
+                    propuestas que traen a nuestra institución.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="#votar">
+                        <div class="boton gap-3 toast-votar h-100">
+                            <span>¡Quiero votar!</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Acerca de -->
+     <div class="container px-4 py-5 revelar acerca-de"
+          id="acerca-de">
+        <h2 class="pb-2 border-bottom">Acerca de</h2>
+        <div class="row py-5">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <iframe src="https://www.youtube.com/embed/DV9oZuhkorg" 
+                        title="Información sobre los centros de estudiantes"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        class="video">
+                </iframe>
+            </div>
+        </div>
+        <div class="row g-4 pt-3 pb-3 row-cols-1 row-cols-lg-2">
+            <div class="col-lg-6">
+                <h2>
+                    <i class="fa-solid fa-graduation-cap icono"></i>
+                    <span class="feature-titulo">Centro de estudiantes</span>
+                </h2>
+                <p>
+                    Un Centro de Estudiantes es una organización conformada por y para los estudiantes de nuestro
+                    establecimiento educativo. Es legitimado por el voto de sus compañeros, poseen objetivos,
+                    actividades y propuestas, consta de una estructura organizacional, con derechos y responsabilidades.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <h2>
+                    <i class="fa-solid fa-check-to-slot icono"></i>
+                    <span class="feature-titulo">Elecciones</span>
+                </h2>
+                <p>
+                    Todos los años, alumnos de 1ero a 7mo, de turno mañana y de turno tarde, realizan una votación en la cual escogen democráticamente al centro de estudiantes que quieren que los represente, luego, se realiza un recuento de votos controlado por autoridades escolares para determinar un ganador.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Listas -->
+    <div class="listas revelar mx-4 rounded-5"
+         id="listas">
+        <div class="container py-4">
+            <h2 class="mb-5 border-bottom" 
+                id="listas-titulo">Listas postuladas</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <img src="img/lista-roja.jpeg" 
+                         alt="Foto de los estudiantes de la lista Roja"
+                         width="140"
+                         class="bd-placeholder-img rounded-circle"
+                         title="Lista roja" />
+
+                    <h2 class="my-3 fw-bold" 
+                        id="titulo-lista-roja">Roja</h2>
+                    <p>
+                        <i>"Somos la voz de cada alumno, nuestro principal propósito es lograr que nuestros proyectos se realicen."</i>
+                    </p>
+
+                    <button type="button" 
+                            class="btnPropuestas"
+                            id="btnPropuestasRoja"
+                            onclick="descargarPropuestas('roja')">
+                        <span>Descargar propuestas &raquo;</span>
+                    </button>
+                </div>
+
+                <div class="col-lg-4 mb-3">
+                    <img src="img/lista-verde.jpg" 
+                         alt="Foto de los estudiantes de la lista Verde"
+                         width="140"
+                         class="bd-placeholder-img rounded-circle"
+                         title="Lista verde" />
+
+                    <h2 class="my-3 fw-bold" 
+                        id="titulo-lista-verde">Verde</h2>
+                    <p>
+                        <i>"Ahora más que nunca podemos hablar por vos y hacer de nuestra institución un mejor lugar para sus alumnos."</i>
+                    </p>
+
+                    <button type="button" 
+                            class="btnPropuestas"
+                            id="btnPropuestasVerde"
+                            onclick="descargarPropuestas('verde')">
+                        <span>Descargar propuestas &raquo;</span>
+                    </button>
+                </div>
+
+                <div class="col-lg-4 mb-3">
+                    <img src="img/lista-rosa.jpeg" 
+                         alt="Foto de los estudiantes de la lista Rosa"
+                         width="140"
+                         class="bd-placeholder-img rounded-circle"
+                         title="Lista rosa" />
+
+                    <h2 class="my-3 fw-bold"
+                        id="titulo-lista-rosa">Rosa</h2>
+                    <p>
+                        <i>"Trabajamos para estar a disposición y representar al alumnado sobre lo que desea reclamar. ¡Trabajamos para vos!"</i>
+                    </p>
+
+                    <button type="button" 
+                            class="btnPropuestas"
+                            id="btnPropuestasRosa"
+                            onclick="descargarPropuestas('rosa')">
+                        <span>Descargar propuestas &raquo;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Votar -->
+    <div class="container my-4 py-5 votar revelar"
+         id="votar">
+        <hr class="separador mb-5">
+
+        <canvas id="confetti" class="position-absolute w-100 h-100"></canvas>
+
+        <!-- Imagen de  fondo -->
+        <div class="imagen rounded-5"></div>
+
+        <h2 class="fw-bold text-center titulo py-2 rounded-3"
+            id="texto-titulo">¿Estás listo para votar?</h2>
+
+        <!-- Contador -->
+        <div id="cuenta"></div>
+
+        <div class="llamada-accion d-flex flex-wrap justify-content-center">
+            <h2 class="fw-semibold mx-4 text-center"
+                id="texto-votacion">Es tu momento de elegir &raquo;</h2>
+            <button type="button"
+                    class="boton gap-3"
+                    id="btn-votar"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal-recordatorios-subscripcion">
+                <span>¡Votar ahora!</span>
+            </button>
+            <p class="d-block text-center inactivo"
+               id="texto-fin-votacion">
+                Esperamos que hayas sido partícipe de las Elecciones del ciclo lectivo 2022. ¡Nos vemos en la institución!
+            </p>
+        </div>
+
+        <hr class="separador mt-5">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer revelar"
+            id="contacto">
+        <div class="row">
+            <div class="col-lg-6 px-0">
+                <div class="contacto">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>tomatorivera@gmail.com</span>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <div class="contacto">
+                    <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                    <span>+54 9 381 597-6813</span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 pt-3 px-4 d-flex justify-content-center">
+                    <img src="img/logo_tecnica1_independencia-argentina.png"
+                             alt="Logo de la Escuela Técnica N1 - Independencia Argentina"
+                             class="footer-logo"
+                             title="Escuela Técnica N1 - Independencia Argentina">
+                </div>
+                <div class="col-lg-4 pt-4 sitios px-4">
+                    <span class="titulo d-block w-100">Otros sitios de interés</span>
+                        <ul class="list-unstyled py-3">
+                            <li>
+                                <a href="faq.html">
+                                    <span class="simbolos">&raquo;</span>
+                                    Preguntas frecuentes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#acerca-de">
+                                    <span class="simbolos">&raquo;</span>
+                                    Acerca de
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#listas">
+                                    <span class="simbolos">&raquo;</span>
+                                    Listas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#votar">
+                                    <span class="simbolos">&raquo;</span>
+                                    Votar
+                                </a>
+                            </li>
+                        </ul>
+                    <div class="redes d-flex align-items-center">
+                        <div class="texto">
+                            <span class="px-2">Síguenos</span>
+                            <a href="https://www.facebook.com/Escuela-Técnica-N-1-Independencia-Argentina-100478898552972"
+                               target="_blank">
+                                <i class="fa-brands fa-facebook p-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 pt-4 px-4 formulario">
+                    <span class="titulo d-block w-100">Contacto rápido</span>
+                    <form id="form"
+                          method="POST"
+                          class="py-3">
+                        <div class="campo">
+                          <div class="texto">Tu email *</div>
+                          <input name="email"
+                                 id="email"
+                                 type="email"
+                                 required>
+                        </div>
+                        <div class="campo">
+                          <div class="texto">Mensaje *</div>
+                          <textarea name="mensaje"
+                                    id="mensaje"
+                                    rows="2"
+                                    cols="25"
+                                    required></textarea>
+                        </div>
+                        <div class="enviar py-1 d-flex align-items-center">
+                            <button type="submit"
+                                    id="button"
+                                    value="Enviar mensaje">Enviar mensaje</button>
+                            <div class="spinner-border mx-3"
+                                 id="spinner-mensaje"
+                                 role="status">
+                                    <span class="visually-hidden">
+                                        Cargando...
+                                    </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 my-4 border-top enlaces">
+                <span class="texto">Tomas Rivera, 2022</span>
+                <ul class="nav col-md-4 list-unstyled d-flex justify-content-end align-items-center">
+                    <li class="ms-3">
+                        <a href="https://www.facebook.com/tomato.rivera"
+                           target="_blank"
+                           data-bs-toggle="tooltip"
+                           data-bs-title="No estoy tan activo :/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="https://www.instagram.com/tomato_sc/"
+                           target="_blank"
+                           data-bs-toggle="tooltip"
+                           data-bs-title="¡Conozcámonos de cerca!">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="https://www.linkedin.com/in/ramiro-tomas-rivera-octtaviano-168072249/"
+                           target="_blank"
+                           data-bs-toggle="tooltip"
+                           data-bs-title="Aquí soy nuevo...">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="https://api.whatsapp.com/send?phone=5493815976813&text=Hola%20Tomas,%20vengo%20desde%20tu%20página%20web!"
+                           target="_blank"
+                           data-bs-toggle="tooltip"
+                           data-bs-title="¡Contáctame!">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- TOAST's Y MODALS -->
+    <!-- Toast Recuerdo de subscripción -->
+    <div role="alert"
+         aria-live="assertive"
+         aria-atomic="true"
+         class="toast"
+         data-bs-autohide="true"
+         id="toast-subscribir">
+        <div class="toast-header">
+            <img src="img/logo_tecnica1_independencia-argentina.png"
+                 class="rounded me-2"
+                 width="20"
+                 alt="Logo de la escuela Técnica N1 - Independencia Argentina">
+            <strong class="me-auto">Escuela Técnica N1</strong>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close">
+            </button>
+        </div>
+        <div class="toast-body">
+            ¡Recuerda subscribirte para recibir en tu correo los resultados de las elecciones!
+        </div>
+    </div>
+
+    <!-- Toast Contacto exitoso -->
+    <div role="alert"
+         aria-live="assertive"
+         aria-atomic="true"
+         class="toast"
+         data-bs-autohide="true"
+         id="toast-mensaje-enviado">
+        <div class="toast-header">
+            <img src="img/logo_tecnica1_independencia-argentina.png"
+                 class="rounded me-2"
+                 width="20"
+                 alt="Logo de la escuela Técnica N1 - Independencia Argentina">
+            <strong class="me-auto">Escuela Técnica N1</strong>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close">
+            </button>
+        </div>
+        <div class="toast-body">
+            Su mensaje ha sido enviado con éxito, lo leeremos a la brevedad.
+        </div>
+    </div>
+  
+    <!-- Modal Subscripción -->
+    <div class="modal fade"
+         id="modalSubscripcion"
+         data-bs-backdrop="static"
+         data-bs-keyboard="false"
+         tabindex="-10"
+         aria-labelledby="modalSubscripcionLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="modalSubscripcionLabel">Subscripción a Elecciones 2022</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="texto">
+                        Al subscribirte, recibirás automáticamente un mensaje con el resúmen de las Elecciones 2022 en tu mail, de esta manera, serás rápidamente informado sin necesidad de asistir a la institución para averiguarlo.
+                    </div>
+                    <div class="formulario mt-4">
+                        <form id="form-subscripcion">
+                            <label for="email" class="fw-bold">Correo: *</label>
+                            <input type="email"
+                                   name="email"
+                                   id="email-subscripcion"
+                                   required
+                                   placeholder="Ingresa tu correo"
+                                   class="correo-subscripcion d-block w-100">
+                          
+                            <input type="submit"
+                                   id="subscribir"
+                                   value="Subscribirme"
+                                   class="mt-3 btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                        id="cerrar-modal-subscripcion">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Subscripcion exitosa -->
+    <div role="alert"
+         aria-live="assertive"
+         aria-atomic="true"
+         class="toast"
+         data-bs-autohide="true"
+         id="toast-subscripcion-registrada">
+        <div class="toast-header">
+            <img src="img/logo_tecnica1_independencia-argentina.png"
+                 class="rounded me-2"
+                 width="20"
+                 alt="Logo de la escuela Técnica N1 - Independencia Argentina">
+            <strong class="me-auto">Escuela Técnica N1</strong>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close">
+            </button>
+        </div>
+        <div class="toast-body">
+            ¡Subscripción registrada con éxito! Revise su email para confirmar.
+        </div>
+    </div>
+
+    <!-- Modal Recordatorios de votacion -->
+    <div class="modal fade"
+         id="modal-recordatorios-subscripcion"
+         data-bs-backdrop="static"
+         data-bs-keyboard="false"
+         tabindex="-10"
+         aria-labelledby="modalSubscripcionLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRecordatoriosSubscripcion">Subscripción a Elecciones 2022</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Recordá algunas cosas antes de continuar a la votación:
+                    <ul class="my-3">
+                        <li class="py-2"><strong>Subscribite</strong> para recibir los resultados rápido en tu correo</li>
+                        <li class="py-2">Escribi tu DNI <strong>sin puntos ni espacios</strong></li>
+                        <li class="py-2">No votes con los <strong>DNI de tus compañeros</strong> (será anulado si tu compañero no reconoce el voto)</li>
+                        <li class="py-2">No votes con los <strong>DNI de tus conocidos</strong> (al no estar en el padrón, el sistema no los cuenta)</li>
+                        <li class="py-2">No te malgastes votando <strong>múltiples veces</strong> (una vez el sistema registra tu voto, no cuenta los repetidos)</li>
+                    </ul>
+                    Teniendo en cuenta esto, podés continuar. <strong>¡Votá al que mejor te represente!</strong>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://docs.google.com/forms/d/1WeHcSh6DxnxsGCs0UBNaYyx-suUaMNxZDMX-GBWcczE/viewform?edit_requested=true" 
+                       target="_blank"
+                       class="btn btn-primary">
+                        Continuar con la subscripción
+                    </a>
+                    <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                        id="cerrar-modal-recordatorio-subscripcion">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Contador -->
+    <script src="lib/simplyCountdown.min.js"></script>
+
+    <!-- Email JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init('kxBAMJV7BefTYBuLj')
+    </script>       
+
+    <!-- Confetti JS -->
+    <script src="lib/index.min.js"></script>
+
+    <!-- Index JS -->
+    <script src="js/index.js"></script>
+</body>
+</html>
